@@ -1,0 +1,82 @@
+.main-container {
+  background-color: rgb(15, 23, 42);
+  display: flex;
+  justify-content: center;
+}
+
+.element-container {
+  margin: 1rem;
+  color: white;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .element-container {
+    width: 95%;
+  }
+}
+
+.summary-container{
+    margin-top: 1rem;
+    border: "2px solid black";
+    border-radius: 5px;
+}
+
+.accordion{
+  margin-top: 1rem;
+}
+
+.accordion-button{
+  position:inherit;
+}
+
+.character-style{
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(9, 15, 30);
+  text-align: center;
+  padding: 1rem;
+  margin:1rem;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.word-style{
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(9, 15, 30);
+  text-align: center;
+  padding: 1rem;
+  margin:1rem;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.time-style{
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(9, 15, 30);
+  text-align: center;
+  padding: 1rem;
+  margin:1rem;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.count-containers{
+  height: 100px;
+  width: 100px;
+  background-color: rgb(9, 15, 30);
+  border-radius: 5px;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+}

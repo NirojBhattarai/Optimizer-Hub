@@ -1,0 +1,181 @@
+.section_home {
+  background-color: rgb(15, 23, 42);
+  min-height: 100vh;
+}
+
+.header_first {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+.intro_section {
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.row {
+  width: 95%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px 30px;
+}
+
+.row .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.row .right {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.row .right .content {
+  color: white;
+  text-align: justify;
+}
+
+.row .right .content p {
+  font-size: 18px;
+  line-height: 26px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  .row .right .content {
+    padding-left: 0;
+    padding-top: 1px;
+  }
+  .row .right {
+    padding-top: 0;
+  }
+
+  .row .right .content p {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.tool-container {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0.8;
+}
+
+.toolcontainername {
+  color:green;
+  background-color: rgb(9, 15, 30);
+  text-align: center;
+  font-weight: bold;
+  display: grid;
+  padding-bottom: 1rem;
+  width: 100%;
+  padding-top: 12px;
+}
+
+.maintool-container {
+  padding-top: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.abouttextanalysistool {
+  color: white;
+  font-size: 18px;
+  text-align:justify;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  display: flex;
+}
+
+.row2 {
+  width: 95%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px 30px;
+  place-items: center;
+  padding-bottom: 1rem;
+}
+
+.row2 .left2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.row2 .right2 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.text-container {
+  text-align: justify;
+  color: antiquewhite;
+}
+
+.left2 a {
+  text-decoration: none;
+}
+
+.left2 .cardone {
+  background-color: rgb(9, 15, 30);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.right2 .cardone {
+  background-color: rgb(9, 15, 30);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.left2 .cardtitle {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: green;
+}
+
+.right2 .cardtitle {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .abouttextanalysistool {
+    padding-left: 0;
+    padding-top: 1px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  } 
+
+  .abouttextanalysistool p {
+    padding-bottom: 0;
+  }
+}
+
+.cardbutton{
+  margin-bottom: 1rem;
+}

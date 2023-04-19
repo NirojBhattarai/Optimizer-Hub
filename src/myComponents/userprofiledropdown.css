@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+    .userprofiledropdown {
+      font-size: 1rem;
+    }
+}
+
+.profile{
+  justify-content: center;
+}
+
+.profile_img {
+  vertical-align: middle;
+  width: 45px;
+  height:50;
+  padding:5px ;
+  border-radius: 50%;
+}
+
+.profile-name{
+  color: green;
+}
