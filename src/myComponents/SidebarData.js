@@ -24,7 +24,7 @@ export const SidebarData = [
   },
   {
     title: 'Unit Converter',
-    path: '/team',
+    path: '/Lengthconverter',
     icon: <FaIcons.FaWeight />,
     cName: 'nav-text'
   },

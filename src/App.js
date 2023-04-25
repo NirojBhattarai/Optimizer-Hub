@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Footer from "./myComponents/Footer";
 import Wordcounter from "./pages/Wordcounter";
 import Agecalculator from "./pages/Agecalculator";
+import Lengthconverter from "./pages/Lengthconverter";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/Wordcounter" element={<Wordcounter />} />
-          <Route path="/Agecalculator" element={ <Agecalculator/>}/>
+          <Route path="/Agecalculator" element={<Agecalculator />} />
+          <Route path="/Lengthconverter" element={<Lengthconverter/>} />
         </Routes>
         <Footer />
       </Router>

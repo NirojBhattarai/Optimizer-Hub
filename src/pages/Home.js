@@ -85,7 +85,7 @@ function Home() {
           <div className="row2">
             <div className="left2">
               <div className="cardone">
-              <Card.Body className="cardbody">
+                <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">Word Counter</Card.Title>
                   <Card.Link href="/Wordcounter">
                     <Button className="cardbutton" variant="primary">
@@ -97,9 +97,87 @@ function Home() {
             </div>
             <div className="right2">
               <div className="cardone">
-              <Card.Body className="cardbody">
+                <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">Age Calculator</Card.Title>
                   <Card.Link href="/Agecalculator">
+                    <Button className="cardbutton" variant="primary">
+                      Click to Open
+                    </Button>
+                  </Card.Link>
+                </Card.Body>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="maintool-container">
+        <h1 className="toolcontainername">Unit Converter</h1>
+        <div className="tool-container">
+          <p className="abouttextanalysistool">
+            Unit converter tool is a versatile and easy-to-use tool that allows
+            you to convert measurements between different units of length,
+            temperature, time, volume, and more. Whether you need to convert
+            miles to kilometers, Fahrenheit to Celsius, or hours to minutes,
+            unit converter has you covered.This tool can be especially useful
+            for scientists, engineers, or anyone else who needs to work with
+            fundamental measurements on a regular basis. Unit converter is a
+            valuable tool for anyone who needs to work with different units of
+            measurement on a regular basis. With its intuitive interface and
+            powerful features, it's the perfect solution for everything from
+            simple unit conversions to complex calculations and analysis.
+          </p>
+          <div className="row2">
+            <div className="left2">
+              <div className="cardone">
+                <Card.Body className="cardbody">
+                  <Card.Title className="cardtitle">
+                    Length Converter
+                  </Card.Title>
+                  <Card.Link href="/Lengthconverter">
+                    <Button className="cardbutton" variant="primary">
+                      Click to Open
+                    </Button>
+                  </Card.Link>
+                </Card.Body>
+              </div>
+            </div>
+            <div className="right2">
+              <div className="cardone">
+                <Card.Body className="cardbody">
+                  <Card.Title className="cardtitle">
+                    Weight Converter
+                  </Card.Title>
+                  <Card.Link href="/Agecalculator">
+                    <Button className="cardbutton" variant="primary">
+                      Click to Open
+                    </Button>
+                  </Card.Link>
+                </Card.Body>
+              </div>
+            </div>
+          </div>
+
+          <div className="row2">
+            <div className="left2">
+              <div className="cardone">
+                <Card.Body className="cardbody">
+                  <Card.Title className="cardtitle">Time Converter</Card.Title>
+                  <Card.Link href="/Wordcounter">
+                    <Button className="cardbutton" variant="primary">
+                      Click to Open
+                    </Button>
+                  </Card.Link>
+                </Card.Body>
+              </div>
+            </div>
+            <div className="right2">
+              <div className="cardone">
+                <Card.Body className="cardbody">
+                  <Card.Title className="cardtitle">
+                    Temperature Converter
+                  </Card.Title>
+                  <Card.Link href="/Unitconverter">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
