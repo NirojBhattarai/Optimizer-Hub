@@ -7,6 +7,7 @@ import Footer from "./myComponents/Footer";
 import Wordcounter from "./pages/Wordcounter";
 import Agecalculator from "./pages/Agecalculator";
 import Lengthconverter from "./pages/Lengthconverter";
+import Weightconverter from "./pages/Weightconverter";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Wordcounter" element={<Wordcounter />} />
           <Route path="/Agecalculator" element={<Agecalculator />} />
           <Route path="/Lengthconverter" element={<Lengthconverter/>} />
+          <Route path="/Weightconverter" element={<Weightconverter/>} />
         </Routes>
         <Footer />
       </Router>

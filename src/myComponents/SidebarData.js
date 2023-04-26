@@ -23,8 +23,14 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Unit Converter',
+    title: 'Length Converter',
     path: '/Lengthconverter',
+    icon: <FaIcons.FaRuler />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Weight Converter',
+    path: '/Weightconverter',
     icon: <FaIcons.FaWeight />,
     cName: 'nav-text'
   },

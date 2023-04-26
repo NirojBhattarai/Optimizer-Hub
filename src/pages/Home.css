@@ -89,6 +89,17 @@
   padding-top: 12px;
 }
 
+.toolcontainername {
+  color:green;
+  background-color: rgb(9, 15, 30);
+  text-align: center;
+  font-weight: bold;
+  display: grid;
+  padding-bottom: 1rem;
+  width: 100%;
+  padding-top: 12px;
+}
+
 .maintool-container {
   padding-top: 2rem;
   display: grid;
@@ -175,6 +186,11 @@
 
   .abouttextanalysistool p {
     padding-bottom: 0;
+  }
+
+  .right2 .longtoolname {
+    font-size: 22px;
+    margin-right: 6px;
   }
 }
 

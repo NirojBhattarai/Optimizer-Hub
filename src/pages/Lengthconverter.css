@@ -118,6 +118,7 @@
 .unit-option option {
   color: #080808;
   font-weight: bolder;
+  text-align: center;
 }
 
 .outputs-wrapperunit2 {

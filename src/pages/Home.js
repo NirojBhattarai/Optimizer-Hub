@@ -175,7 +175,7 @@ function Home() {
               <div className="cardone">
                 <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">
-                    Temperature Converter
+                    <span className="longtoolname">Temperature</span> Converter
                   </Card.Title>
                   <Card.Link href="/Unitconverter">
                     <Button className="cardbutton" variant="primary">
