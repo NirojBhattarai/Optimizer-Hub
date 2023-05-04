@@ -58,6 +58,7 @@ export default function Wordcounter(props) {
             value={text}
             rows="8"
             style={styleTextArea}
+            placeholder="Enter your text here"
           ></textarea>
         </div>
         <div className="buttons">
@@ -112,7 +113,7 @@ export default function Wordcounter(props) {
           <h2 style={{ color: "green", fontWeight: "bold", fontSize: "35px" }}>
             Text Analysis :
           </h2>
-          <p
+          <span
             style={{
               textAlign: "center",
               margin: "1rem",
@@ -143,7 +144,7 @@ export default function Wordcounter(props) {
               {(0.08 * text.length).toFixed(2)} minutes in average (not
               approximately)
             </span>
-          </p>
+          </span>
         </div>
 
         <div>

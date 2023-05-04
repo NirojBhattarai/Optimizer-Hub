@@ -86,7 +86,7 @@ export default function Lengthconverter() {
           units.
         </p>
         <div className="inputs-wrapperunit">
-          <input className="data-input" type="number" id="data-input" />
+          <input className="data-input" type="number" id="data-input" placeholder="Enter data here" />
           <select
             name="cars"
             id="data-type"

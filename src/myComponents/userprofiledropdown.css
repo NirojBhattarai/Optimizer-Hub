@@ -1,21 +1,26 @@
-@media (max-width: 768px) {
-    .userprofiledropdown {
-      font-size: 1rem;
-    }
-}
 
 .profile{
   justify-content: center;
 }
 
 .profile_img {
-  vertical-align: middle;
+  vertical-align:middle;
   width: 45px;
-  height:50;
   border-radius: 50%;
 }
 
 .profile-name{
   color: green;
   margin-left: 4%;
+}
+
+.buttonlogout{
+  margin-left: 5rem;
+}
+
+@media (max-width: 768px) {
+  .authbutton{
+    padding-bottom: 0.5rem;
+    margin-left: 0.7rem;
+  }
 }

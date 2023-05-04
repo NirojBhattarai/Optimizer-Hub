@@ -86,7 +86,7 @@ export default function Weightconverter() {
           units.
         </p>
         <div className="inputs-wrapperunit">
-          <input className="data-input" type="number" id="data-input" />
+          <input className="data-input" type="number" id="data-input" placeholder="Enter data here" />
           <select
             name="data"
             id="data-type"

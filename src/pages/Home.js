@@ -1,8 +1,9 @@
 import React from "react";
 import "../pages/Home.css";
-import coverphoto from "../myComponents/img/coverphoto.jpg";
+import coverphoto from "../myComponents/img/coverphoto.webp";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 import "bootstrap/js/dist/dropdown";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -60,11 +61,11 @@ function Home() {
               <div className="cardone">
                 <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">Word Counter</Card.Title>
-                  <Card.Link href="/Wordcounter">
+                  <Link to="/Wordcounter">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>
@@ -72,11 +73,11 @@ function Home() {
               <div className="cardone">
                 <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">Age Calculator</Card.Title>
-                  <Card.Link href="/Agecalculator">
+                  <Link to="/Agecalculator">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>
@@ -87,11 +88,11 @@ function Home() {
               <div className="cardone">
                 <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">Word Counter</Card.Title>
-                  <Card.Link href="/Wordcounter">
+                  <Link to="/Wordcounter">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>
@@ -99,11 +100,11 @@ function Home() {
               <div className="cardone">
                 <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">Age Calculator</Card.Title>
-                  <Card.Link href="/Agecalculator">
+                  <Link to="/Agecalculator">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>
@@ -134,11 +135,11 @@ function Home() {
                   <Card.Title className="cardtitle">
                     Length Converter
                   </Card.Title>
-                  <Card.Link href="/Lengthconverter">
+                  <Link to="/Lengthconverter">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>
@@ -148,11 +149,11 @@ function Home() {
                   <Card.Title className="cardtitle">
                     Weight Converter
                   </Card.Title>
-                  <Card.Link href="/Agecalculator">
+                  <Link to="/Agecalculator">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>
@@ -163,11 +164,11 @@ function Home() {
               <div className="cardone">
                 <Card.Body className="cardbody">
                   <Card.Title className="cardtitle">Time Converter</Card.Title>
-                  <Card.Link href="/Wordcounter">
+                  <Link to="/Wordcounter">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>
@@ -177,11 +178,11 @@ function Home() {
                   <Card.Title className="cardtitle">
                     <span className="longtoolname">Temperature</span> Converter
                   </Card.Title>
-                  <Card.Link href="/Unitconverter">
+                  <Link to="/Unitconverter">
                     <Button className="cardbutton" variant="primary">
                       Click to Open
                     </Button>
-                  </Card.Link>
+                  </Link>
                 </Card.Body>
               </div>
             </div>

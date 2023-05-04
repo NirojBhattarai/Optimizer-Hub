@@ -1,24 +1,30 @@
-import Dropdown from "react-bootstrap/Dropdown";
 import "../myComponents/userprofiledropdown.css";
 import "bootstrap/dist/css/bootstrap.css";
-import avatar from './img/avatar.webp'
-
+import { Link, useNavigate } from "react-router-dom";
 
 function Userdropdown() {
+  let navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
   return (
-    <Dropdown className="userprofiledropdown">
-      
-      <Dropdown.Toggle variant="none" id="dropdown-basic" className="profile">
-      <img src={avatar} alt="Profile" className="profile_img"/>
-        <span className='profile-name'>User Profile</span>
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">View Profile</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Log Out</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+    <div>
+      {!localStorage.getItem("token") ? (
+        <form className="d-flex authbutton" role="search">
+          <Link className="btn btn-success mx-1" to="/login" role="submit">
+            Login
+          </Link>
+          <Link className="btn btn-success mx-1" to="/signup" role="submit">
+            SignUp
+          </Link>
+        </form>
+      ) : (
+        <button onClick={handleLogout} className="btn btn-primary buttonlogout">
+          Logout
+        </button>
+      )}
+    </div>
   );
 }
 

@@ -81,12 +81,8 @@ span {
 }
 
 .userprofile {
-  display: block;
-  color: green;
-  align-items: center;
   margin-right: 1rem;
-  float: right;
-  text-align: right;
+  
 }
 
 @media (max-width: 414px) {
