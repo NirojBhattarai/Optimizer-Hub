@@ -18,7 +18,7 @@ const Signup = () => {
       e.preventDefault();
       const { name, email, password } = credentials;
       const response = await fetch(
-        "http://localhost:5000/api/auth/createuser",
+        "https://backend-optimizerhub.onrender.com/api/auth/createuser",
         {
           method: "POST",
           headers: {

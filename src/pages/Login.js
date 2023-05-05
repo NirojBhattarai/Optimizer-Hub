@@ -7,16 +7,19 @@ const Login = () => {
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: credentials.email,
-        password: credentials.password,
-      }),
-    });
+    const response = await fetch(
+      "https://backend-optimizerhub.onrender.com/api/auth/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: credentials.email,
+          password: credentials.password,
+        }),
+      }
+    );
     const json = await response.json();
     console.log(json);
     if (json.success) {
@@ -35,13 +38,13 @@ const Login = () => {
   const handleCancel = (e) => {
     e.preventDefault();
     navigate("/");
-  }
+  };
   return (
     <div className="logincontainer">
       <div className="container ">
         <form onSubmit={handleSubmit}>
           <h1 className="logintitle">Login</h1>
-          <hr className="hr1"/>
+          <hr className="hr1" />
           <div className="mb-3 mt-4">
             <label htmlFor="email" className="form-label">
               Email address:
@@ -74,12 +77,16 @@ const Login = () => {
               placeholder="Enter your password"
             />
           </div>
-          <hr className="hr1"/>
+          <hr className="hr1" />
           <div className="buttoncontainer">
             <button type="submit" className="btn btn-success submitbutton">
               Submit
             </button>
-            <button type="button" onClick={handleCancel} className="btn btn-danger submitbutton">
+            <button
+              type="button"
+              onClick={handleCancel}
+              className="btn btn-danger submitbutton"
+            >
               Cancel
             </button>
           </div>
