@@ -5,24 +5,29 @@ export default function Wordcounter(props) {
   const handle_Upclick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert('Converted to Uppercase','success');
   };
 
   const handle_Lowclick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert('Converted to Lowercase','success');
   };
 
   const handle_Onclear = () => {
     setText("");
+    props.showAlert('Clearing Successful','warning');
   };
 
   const handle_OnCopy = () => {
     navigator.clipboard.writeText(text);
+    props.showAlert('Copied to Clipboard','warning');
   };
 
   const handle_OnExtraSpace = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert('Extra Space Removed','success');
   };
 
   const handle_Onchange = (event) => {
@@ -31,6 +36,7 @@ export default function Wordcounter(props) {
 
   const handle_Oncapitalization = () => {
     setText(text.charAt(0).toUpperCase() + text.slice(1).toLowerCase());
+    props.showAlert('Capitialization Successful','success')
   };
 
   const [text, setText] = useState("");

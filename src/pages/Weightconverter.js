@@ -1,7 +1,7 @@
 import React from "react";
 import "./Weightconverter.css";
 
-export default function Weightconverter() {
+export default function Weightconverter(props) {
   let inputData;
   let dataType;
   let gram, kilogram, pound, ounce, miligram, ton;
@@ -10,6 +10,7 @@ export default function Weightconverter() {
     getData();
     checkUnit();
     displayResult(gram, kilogram, pound, ounce, miligram, ton);
+    props.showAlert("Data Conversion Successful", "success");
   }
   
   function getData() {
@@ -62,8 +63,9 @@ export default function Weightconverter() {
       ounce = (inputData * 35273.9619).toFixed(2);
       miligram = (inputData * 1000000000).toFixed(2);
       ton = inputData;
-    } else {
-      alert("Something Error");
+    } 
+    else {
+      props.showAlert("Something goes Wrong. Try again", "danger");
     }
   }
 

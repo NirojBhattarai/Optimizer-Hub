@@ -26,14 +26,14 @@ function App() {
   return (
     <>
       <Router>
-        <NavigationBar showAlert={showAlert} />
+        <NavigationBar/>
         <Alert alert={alert}/>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/Wordcounter" element={<Wordcounter />} />
-          <Route path="/Agecalculator" element={<Agecalculator />} />
-          <Route path="/Lengthconverter" element={<Lengthconverter />} />
-          <Route path="/Weightconverter" element={<Weightconverter />} />
+          <Route path="/Wordcounter" element={<Wordcounter showAlert={showAlert} />} />
+          <Route path="/Agecalculator" element={<Agecalculator showAlert={showAlert} />} />
+          <Route path="/Lengthconverter" element={<Lengthconverter showAlert={showAlert} />} />
+          <Route path="/Weightconverter" element={<Weightconverter showAlert={showAlert} />} />
           <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
           <Route exact path="/signup" element={<Signup showAlert={showAlert} />} />
         </Routes>

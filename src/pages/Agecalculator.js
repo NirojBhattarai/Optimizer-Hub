@@ -1,7 +1,7 @@
 import React from "react";
 import "./Agecalculator.css";
 
-export default function Wordcounter() {
+export default function Wordcounter(props) {
   const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   function ageCalculate() {
@@ -27,7 +27,7 @@ export default function Wordcounter() {
         birthDetails.month === currentMonth &&
         birthDetails.year === currentYear)
     ) {
-      alert("Not Born Yet");
+      props.showAlert("Not Born Yet",'danger');
       displayResult("-", "-", "-");
       return;
     }
@@ -53,6 +53,7 @@ export default function Wordcounter() {
       }
     }
     displayResult(birthDate, birthMonth, birthYear);
+    props.showAlert("Data Calculation Successful",'success');
   }
 
   function displayResult(bDate, bMonth, bYear) {

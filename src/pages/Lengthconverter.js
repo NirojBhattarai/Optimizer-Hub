@@ -1,7 +1,7 @@
 import React from "react";
 import "./Lengthconverter.css";
 
-export default function Lengthconverter() {
+export default function Lengthconverter(props) {
   let inputData;
   let dataType;
   let meter, centimeter, foot, inch, yard, kilometer;
@@ -10,6 +10,7 @@ export default function Lengthconverter() {
     getData();
     checkUnit();
     displayResult(meter, centimeter, foot, inch, yard, kilometer);
+    props.showAlert("Data Conversion Successful", "success");
   }
   
   function getData() {
@@ -63,7 +64,7 @@ export default function Lengthconverter() {
       yard = (inputData * 1093.6133).toFixed(2);
       kilometer = inputData;
     } else {
-      alert("Something Error");
+      props.showAlert("Something goes Wrong. Try again", "danger");
     }
   }
 
