@@ -20,9 +20,11 @@ function Userdropdown() {
           </Link>
         </form>
       ) : (
-        <button onClick={handleLogout} className="btn btn-success buttonlogout">
+        <form className="d-flex authbutton" role="search">
+        <Link onClick={handleLogout} className="btn btn-success buttonlogout">
           Logout
-        </button>
+        </Link>
+        </form>
       )}
     </div>
   );
