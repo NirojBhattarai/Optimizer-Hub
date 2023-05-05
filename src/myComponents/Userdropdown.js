@@ -20,7 +20,7 @@ function Userdropdown() {
           </Link>
         </form>
       ) : (
-        <button onClick={handleLogout} className="btn btn-primary buttonlogout">
+        <button onClick={handleLogout} className="btn btn-success buttonlogout">
           Logout
         </button>
       )}
