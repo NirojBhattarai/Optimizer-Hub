@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 import "./Login.css";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
+ 
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, ] = useState("");
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const response = await fetch(
       "https://backend-optimizerhub.onrender.com/api/auth/login",
       {
@@ -27,8 +32,10 @@ const Login = (props) => {
       localStorage.setItem("token", json.authtoken);
       navigate("/");
       props.showAlert("Logged in Successfully", "success");
+      setIsLoading(false);
     } else {
       props.showAlert("Invalid Credentials", "danger");
+      setIsLoading(false);
     }
   };
 
@@ -40,6 +47,9 @@ const Login = (props) => {
     e.preventDefault();
     navigate("/");
   };
+ 
+  
+ 
   return (
     <div className="logincontainer">
       <div className="container ">
@@ -80,10 +90,16 @@ const Login = (props) => {
           </div>
           <hr className="hr1" />
           <div className="buttoncontainer">
-            <button type="submit" className="btn btn-success submitbutton">
+            {isLoading ? <LoadingSpinner /> : ""}
+            {errorMessage && <div className="error">{errorMessage}</div>}
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              disabled={isLoading}
+              className="btn btn-success submitbutton"
+            >
               Submit
             </button>
-
             <button
               type="button"
               onClick={handleCancel}

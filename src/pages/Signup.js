@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 import "./Signup.css";
 
 const Signup = (props) => {
@@ -9,13 +10,15 @@ const Signup = (props) => {
     password: "",
     confirmpassword: "",
   });
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage] = useState("");
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
     const pass1 = document.getElementById("password").value;
     const pass2 = document.getElementById("confirmpassword").value;
     if (pass1 === pass2) {
       e.preventDefault();
+      setIsLoading(true);
       const { name, email, password } = credentials;
       const response = await fetch(
         "https://backend-optimizerhub.onrender.com/api/auth/createuser",
@@ -34,12 +37,15 @@ const Signup = (props) => {
         //save the auth token and redirect
         localStorage.setItem("token", json.authtoken);
         navigate("/");
-        props.showAlert('User Account created successfully','success');
+        props.showAlert("User Account created successfully", "success");
+        setIsLoading(false);
       } else {
-        props.showAlert('Invalid Credentials','danger');
+        props.showAlert("Invalid Credentials", "danger");
+        setIsLoading(false);
       }
     } else {
-      props.showAlert('Password doesnot match','danger');
+      props.showAlert("Password doesnot match", "danger");
+      setIsLoading(false);
     }
   };
 
@@ -57,7 +63,7 @@ const Signup = (props) => {
       <div className="containers">
         <form onSubmit={handleSubmit}>
           <h1 className="signuptitle">SignUp</h1>
-          <hr className="hr2"/>
+          <hr className="hr2" />
           <div className="mb-3 mt-4">
             <label htmlFor="name" className="form-label">
               User name:
@@ -116,9 +122,17 @@ const Signup = (props) => {
               placeholder="Re-enter the password to confirm"
             />
           </div>
-          <hr className="hr2"/>
+          <hr className="hr2" />
+
           <div className="buttoncontainer">
-            <button type="submit" className="btn btn-success submitbutton">
+            {isLoading ? <LoadingSpinner /> : ""}
+            {errorMessage && <div className="error">{errorMessage}</div>}
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              disabled={isLoading}
+              className="btn btn-success submitbutton"
+            >
               Submit
             </button>
             <button
