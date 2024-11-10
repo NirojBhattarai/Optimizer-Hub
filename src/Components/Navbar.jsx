@@ -12,12 +12,12 @@ function NavigationBar() {
 
   return (
     <>
-      <div className="flex items-center bg-gray-800 h-20 text-white px-4">
+      <div className="flex items-center bg-gradient-to-r from-blue-400 to-purple-600 h-20 text-white px-4">
         <button onClick={showSidebar} className="text-xl">
           <FaIcons.FaBars />
         </button>
 
-        <h2 className="ml-4 text-green-500 text-3xl font-bold hidden md:block">
+        <h2 className="ml-4 text-white text-3xl font-bold hidden md:block">
           Optimizer Hub
         </h2>
 
@@ -27,7 +27,7 @@ function NavigationBar() {
       </div>
 
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 transform ${
+        className={`fixed top-0 left-0 h-full w-64 bg-gradient-to-r from-blue-400 to-purple-600 transform ${
           sidebar ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300`}
       >

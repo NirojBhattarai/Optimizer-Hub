@@ -9,6 +9,7 @@ import Lengthconverter from "./pages/Lengthconverter";
 import Weightconverter from "./pages/Weightconverter";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
