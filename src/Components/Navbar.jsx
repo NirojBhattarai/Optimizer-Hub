@@ -27,7 +27,7 @@ function NavigationBar() {
       </div>
 
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-gradient-to-r from-blue-400 to-purple-600 transform ${
+        className={`fixed top-0 left-0 h-full w-64 bg-blue-800 transform ${
           sidebar ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300`}
       >
