@@ -5,7 +5,7 @@ const Homepage = () => {
   return (
     <div className="font-sans">
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-400 to-purple-600 text-white py-20">
+      <header className="bg-gradient-to-r from-blue-800 to-purple-800 text-white py-20">
         <div className="text-center">
           <h1 className="text-5xl font-extrabold mb-4">
             Welcome to Your All-in-One Toolset

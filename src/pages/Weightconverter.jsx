@@ -9,7 +9,6 @@ export default function Weightconverter(props) {
     getData();
     checkUnit();
     displayResult(gram, kilogram, pound, ounce, miligram, ton);
-    props.showAlert("Data Conversion Successful", "success");
   }
 
   function getData() {
@@ -60,8 +59,6 @@ export default function Weightconverter(props) {
       ounce = (inputData * 35273.9619).toFixed(2);
       miligram = (inputData * 1000000000).toFixed(2);
       ton = inputData;
-    } else {
-      props.showAlert("Something goes wrong. Try again", "danger");
     }
   }
 
@@ -75,19 +72,18 @@ export default function Weightconverter(props) {
   }
 
   return (
-    <div className="min-h-screen flex justify-center bg-slate-900">
-      <div className="w-1/2 p-8 bg-gray-800 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-green-500 text-center mb-4">
-          Enter your data for Weight Conversion:
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-white p-10 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
+          Enter your data for Weight Conversion
         </h2>
-        <p className="text-white text-lg text-justify mb-6">
-          Enter your data in the given field and select the unit in order to
-          convert it to the desired unit. This tool will help for accurate
-          conversion of data units.
+        <p className="text-center text-gray-600 mb-8">
+          Enter your data in the field below, select the unit, and convert it to
+          the desired unit for an accurate measurement.
         </p>
-        <div className="text-center bg-gray-700 p-6 rounded-lg shadow-lg mb-12">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
           <input
-            className="w-1/3 p-2 text-lg font-semibold text-black rounded-lg mb-4"
+            className="w-full sm:w-2/3 p-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             type="number"
             id="data-input"
             placeholder="Enter data here"
@@ -95,61 +91,73 @@ export default function Weightconverter(props) {
           <select
             name="data"
             id="data-type"
-            className="w-1/3 p-2 text-lg font-semibold text-black rounded-lg mb-4"
+            className="w-full sm:w-1/3 p-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             onChange={getData}
           >
             <option value="gram">Gram</option>
             <option value="kilogram">Kilogram</option>
             <option value="pound">Pound</option>
             <option value="ounce">Ounce</option>
-            <option value="miligram">Miligram</option>
+            <option value="miligram">Milligram</option>
             <option value="ton">Ton</option>
           </select>
           <button
-            className="w-1/3 p-3 bg-green-500 text-white font-bold rounded-lg"
+            className="w-full sm:w-1/3 p-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             onClick={unitConvert}
           >
             Calculate
           </button>
         </div>
-        <div className="flex justify-between mb-6">
-          <div className="w-1/5 p-4 bg-gray-700 text-white rounded-lg shadow-lg text-center">
-            <span id="grams" className="text-xl font-semibold">
+        <div className="flex justify-between gap-4">
+          <div className="w-1/3 p-6 text-center bg-gray-200 rounded-lg shadow-md">
+            <span className="block text-4xl font-bold text-gray-800" id="grams">
               -
             </span>
-            <p>Grams</p>
+            <p className="text-gray-500">Grams</p>
           </div>
-          <div className="w-1/5 p-4 bg-gray-700 text-white rounded-lg shadow-lg text-center">
-            <span id="kilograms" className="text-xl font-semibold">
+          <div className="w-1/3 p-6 text-center bg-gray-200 rounded-lg shadow-md">
+            <span
+              className="block text-4xl font-bold text-gray-800"
+              id="kilograms"
+            >
               -
             </span>
-            <p>Kilograms</p>
+            <p className="text-gray-500">Kilograms</p>
           </div>
-          <div className="w-1/5 p-4 bg-gray-700 text-white rounded-lg shadow-lg text-center">
-            <span id="pounds" className="text-xl font-semibold">
+          <div className="w-1/3 p-6 text-center bg-gray-200 rounded-lg shadow-md">
+            <span
+              className="block text-4xl font-bold text-gray-800"
+              id="pounds"
+            >
               -
             </span>
-            <p>Pounds</p>
+            <p className="text-gray-500">Pounds</p>
           </div>
         </div>
-        <div className="flex justify-between">
-          <div className="w-1/5 p-4 bg-gray-700 text-white rounded-lg shadow-lg text-center">
-            <span id="ounces" className="text-xl font-semibold">
+        <div className="flex justify-between gap-4 mt-4">
+          <div className="w-1/3 p-6 text-center bg-gray-200 rounded-lg shadow-md">
+            <span
+              className="block text-4xl font-bold text-gray-800"
+              id="ounces"
+            >
               -
             </span>
-            <p>Ounces</p>
+            <p className="text-gray-500">Ounces</p>
           </div>
-          <div className="w-1/5 p-4 bg-gray-700 text-white rounded-lg shadow-lg text-center">
-            <span id="miligrams" className="text-xl font-semibold">
+          <div className="w-1/3 p-6 text-center bg-gray-200 rounded-lg shadow-md">
+            <span
+              className="block text-4xl font-bold text-gray-800"
+              id="miligrams"
+            >
               -
             </span>
-            <p>Miligrams</p>
+            <p className="text-gray-500">Milligrams</p>
           </div>
-          <div className="w-1/5 p-4 bg-gray-700 text-white rounded-lg shadow-lg text-center">
-            <span id="tons" className="text-xl font-semibold">
+          <div className="w-1/3 p-6 text-center bg-gray-200 rounded-lg shadow-md">
+            <span className="block text-4xl font-bold text-gray-800" id="tons">
               -
             </span>
-            <p>Tons</p>
+            <p className="text-gray-500">Tons</p>
           </div>
         </div>
       </div>

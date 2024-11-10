@@ -9,7 +9,6 @@ export default function Lengthconverter(props) {
     getData();
     checkUnit();
     displayResult(meter, centimeter, foot, inch, yard, kilometer);
-    props.showAlert("Data Conversion Successful", "success");
   }
 
   function getData() {
@@ -60,8 +59,6 @@ export default function Lengthconverter(props) {
       inch = (inputData * 39370.0787).toFixed(2);
       yard = (inputData * 1093.6133).toFixed(2);
       kilometer = inputData;
-    } else {
-      props.showAlert("Something went wrong. Try again", "danger");
     }
   }
 
@@ -75,27 +72,27 @@ export default function Lengthconverter(props) {
   }
 
   return (
-    <div className="min-h-screen flex justify-center bg-slate-900">
-      <div className="w-full sm:w-1/2 p-10 bg-white rounded-lg shadow-xl">
-        <h2 className="text-center text-green-500 font-bold text-2xl mb-4">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-10">
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-white p-10 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
           Enter your data for Length Conversion:
         </h2>
-        <p className="text-white text-lg text-justify mb-6">
-          Enter your data in the given field and select the unit in order to
-          convert it to the desired unit. This tool will help for accurate
-          conversion of data units.
+        <p className="text-center text-gray-600 mb-6">
+          Enter your data in the given field and select the unit to convert it
+          to the desired unit. This tool will help you with accurate data unit
+          conversion.
         </p>
 
-        <div className="space-y-6 text-center">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
           <input
-            className="w-1/3 h-12 px-4 text-xl rounded-lg border-2 border-gray-400"
+            className="w-full sm:w-2/3 p-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             type="number"
             id="data-input"
             placeholder="Enter data here"
           />
           <select
             id="data-type"
-            className="w-1/3 h-12 text-xl rounded-lg border-2 border-gray-400"
+            className="w-full sm:w-1/3 p-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             onChange={getData}
           >
             <option value="centimeter">Centimeter</option>
@@ -105,54 +102,65 @@ export default function Lengthconverter(props) {
             <option value="yard">Yard</option>
             <option value="kilometer">Kilometer</option>
           </select>
+        </div>
 
+        <div className="text-center">
           <button
-            className="w-1/3 h-12 bg-green-500 text-white font-bold text-xl rounded-lg"
+            className="w-full p-3 bg-blue-600 text-white font-bold text-lg rounded-lg hover:bg-blue-600 transition-colors"
             onClick={unitConvert}
           >
             Calculate
           </button>
         </div>
 
-        <div className="mt-8 grid grid-cols-3 gap-6">
-          <div className="bg-slate-700 text-white p-6 rounded-lg shadow-xl">
-            <span id="meters" className="text-2xl font-bold">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md text-center">
+            <span
+              id="meters"
+              className="block text-2xl font-bold text-gray-800"
+            >
               -
             </span>
-            <p className="text-lg">Meters</p>
+            <p className="text-gray-500">Meters</p>
           </div>
-          <div className="bg-slate-700 text-white p-6 rounded-lg shadow-xl">
-            <span id="centimeters" className="text-2xl font-bold">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md text-center">
+            <span
+              id="centimeters"
+              className="block text-2xl font-bold text-gray-800"
+            >
               -
             </span>
-            <p className="text-lg">Centimeters</p>
+            <p className="text-gray-500">Centimeters</p>
           </div>
-          <div className="bg-slate-700 text-white p-6 rounded-lg shadow-xl">
-            <span id="foots" className="text-2xl font-bold">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md text-center">
+            <span id="foots" className="block text-2xl font-bold text-gray-800">
               -
             </span>
-            <p className="text-lg">Foots</p>
+            <p className="text-gray-500">Feet</p>
           </div>
-        </div>
-
-        <div className="mt-4 grid grid-cols-3 gap-6">
-          <div className="bg-slate-700 text-white p-6 rounded-lg shadow-xl">
-            <span id="inches" className="text-2xl font-bold">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md text-center">
+            <span
+              id="inches"
+              className="block text-2xl font-bold text-gray-800"
+            >
               -
             </span>
-            <p className="text-lg">Inches</p>
+            <p className="text-gray-500">Inches</p>
           </div>
-          <div className="bg-slate-700 text-white p-6 rounded-lg shadow-xl">
-            <span id="yards" className="text-2xl font-bold">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md text-center">
+            <span id="yards" className="block text-2xl font-bold text-gray-800">
               -
             </span>
-            <p className="text-lg">Yards</p>
+            <p className="text-gray-500">Yards</p>
           </div>
-          <div className="bg-slate-700 text-white p-6 rounded-lg shadow-xl">
-            <span id="kilometers" className="text-2xl font-bold">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md text-center">
+            <span
+              id="kilometers"
+              className="block text-2xl font-bold text-gray-800"
+            >
               -
             </span>
-            <p className="text-lg">Kilometers</p>
+            <p className="text-gray-500">Kilometers</p>
           </div>
         </div>
       </div>
