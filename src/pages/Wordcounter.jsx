@@ -35,14 +35,14 @@ export default function Wordcounter() {
   const [text, setText] = useState("");
 
   return (
-    <div className="flex justify-center bg-gray-900 py-4">
-      <div className="bg-gray-800 text-white p-6 w-4/5 md:w-11/12">
+    <div className="flex justify-center bg-white py-4">
+      <div className="bg-white text-white p-6 w-4/5 md:w-11/12">
         <h2 className="text-green-400 font-bold text-2xl mb-4">
           Enter your text here:
         </h2>
 
         <textarea
-          className="form-control w-full p-4 text-lg bg-gray-700 border-2 border-gray-600 rounded-md"
+          className="form-control w-full p-4 text-lg text-black bg-gray-200 border-2 border-gray-600 rounded-md"
           id="TextArea"
           onChange={handle_Onchange}
           value={text}
@@ -112,36 +112,6 @@ export default function Wordcounter() {
               <span className="text-green-400 font-bold">
                 {(0.08 * text.length).toFixed(2)} minutes in average
               </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-6">
-          <h2 className="text-green-400 font-bold text-2xl">Text Summary:</h2>
-          <div className="accordion mt-4">
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="headingOne">
-                <button
-                  className="accordion-button text-white bg-gray-800 hover:bg-gray-700 border-b border-white"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="false"
-                  aria-controls="collapseOne"
-                >
-                  Click here to preview
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                className="accordion-collapse collapse"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
-              >
-                <div className="accordion-body bg-gray-700 text-white p-4">
-                  {text}
-                </div>
-              </div>
             </div>
           </div>
         </div>
