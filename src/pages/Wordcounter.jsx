@@ -37,7 +37,7 @@ export default function Wordcounter() {
   return (
     <div className="flex justify-center bg-white py-4">
       <div className="bg-white text-white p-6 w-4/5 md:w-11/12">
-        <h2 className="text-green-400 font-bold text-2xl mb-4">
+        <h2 className="text-green-800 font-bold text-2xl mb-4">
           Enter your text here:
         </h2>
 
@@ -90,7 +90,7 @@ export default function Wordcounter() {
         </div>
 
         <div className="mt-6">
-          <h2 className="text-green-400 font-bold text-2xl">Text Analysis:</h2>
+          <h2 className="text-green-800 font-bold text-2xl">Text Analysis:</h2>
           <div className="grid grid-cols-2 gap-4 mt-4">
             <div className="text-center bg-gray-700 p-4 rounded-md border border-white">
               <h4 className="font-bold">Characters:</h4>
