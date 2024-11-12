@@ -32,8 +32,8 @@ const Homepage = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {/* Tool Card 1: Word Counter */}
-          <Link to="/Wordcounter" className="hover:scale-95">
-            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center">
+          <Link to="/Wordcounter">
+            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center hover:scale-95 hover:bg-slate-300 transition duration-200">
               <div className="text-4xl mb-4 text-blue-500">📝</div>
               <h3 className="text-xl font-semibold mb-3">Word Counter</h3>
               <p className="text-gray-600 mb-4">
@@ -43,8 +43,8 @@ const Homepage = () => {
           </Link>
 
           {/* Tool Card 2: Age Calculator */}
-          <Link to="/Agecalculator" className="hover:scale-95">
-            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center">
+          <Link to="/Agecalculator">
+            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center hover:scale-95 hover:bg-slate-300 transition duration-200">
               <div className="text-4xl mb-4 text-blue-500">🔞</div>
               <h3 className="text-xl font-semibold mb-3">Age Calculator</h3>
               <p className="text-gray-600 mb-4">
@@ -55,8 +55,8 @@ const Homepage = () => {
           </Link>
 
           {/* Tool Card 3: Length Converter */}
-          <Link to="/Lengthconverter" className="hover:scale-95">
-            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center">
+          <Link to="/Lengthconverter">
+            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center hover:scale-95 hover:bg-slate-300 transition duration-200">
               <div className="text-4xl mb-4 text-blue-500">📏</div>
               <h3 className="text-xl font-semibold mb-3">Length Converter</h3>
               <p className="text-gray-600 mb-4">
@@ -67,8 +67,8 @@ const Homepage = () => {
           </Link>
 
           {/* Tool Card 4: Weight Converter */}
-          <Link to="/Weightconverter" className="hover:scale-95">
-            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center">
+          <Link to="/Weightconverter">
+            <div className="bg-white p-6 shadow-lg rounded-lg text-center h-64 w-full flex flex-col justify-center items-center hover:scale-95 hover:bg-slate-300 transition duration-200">
               <div className="text-4xl mb-4 text-blue-500">⚖️</div>
               <h3 className="text-xl font-semibold mb-3">Weight Converter</h3>
               <p className="text-gray-600 mb-4">
