@@ -13,13 +13,13 @@ function Userdropdown() {
       {!localStorage.getItem("token") ? (
         <div className="flex space-x-2 authbutton">
           <Link
-            className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200"
+            className="px-4 py-2 bg-amber-500 text-black font-semibold rounded-md hover:bg-amber-700 transition duration-200"
             to="/login"
           >
             Login
           </Link>
           <Link
-            className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200"
+            className="px-4 py-2 bg-amber-500 text-black font-semibold rounded-md hover:bg-amber-700 transition duration-200"
             to="/signup"
           >
             SignUp
